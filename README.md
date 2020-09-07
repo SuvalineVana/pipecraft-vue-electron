@@ -6,3 +6,7 @@ vue add vuetify
 vue add electron-builder   
 yarn electron:serve
 ```
+# to build
+```
+yarn electron:build
+```
