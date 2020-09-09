@@ -1,16 +1,16 @@
 <template>
   <v-app>
     <v-main>
-    <BaseLayout/>
+      <BaseLayout />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import BaseLayout from './components/BaseLayout'
+import BaseLayout from "./components/BaseLayout";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     BaseLayout,
