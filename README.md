@@ -1,24 +1,12 @@
 # pipecraft-vue-electron
-
-## Project setup
 ```
-npm install
+vue create pipecraft-vue-electron
+cd pipecraft-vue-electron
+vue add vuetify
+vue add electron-builder   
+yarn electron:serve
 ```
-
-### Compiles and hot-reloads for development
+# to build
 ```
-npm run serve
+yarn electron:build
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
