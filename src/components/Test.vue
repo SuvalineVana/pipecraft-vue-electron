@@ -1,18 +1,21 @@
 <template>
   <div class="text-center">
-    <v-menu offset-y>
+    <v-menu
+      offset-y
+      dark
+    >
       <template v-slot:activator="{ on, attrs }">
-        <v-btn 
-          color="primary"
-          dark
-          elevation
+        <v-btn
           v-bind="attrs"
           v-on="on"
+          :block='true'
         >
           Dropdown
         </v-btn>
       </template>
-      <v-list>
+      <v-list
+      
+      >
         <v-list-item
           v-for="(item, index) in items"
           :key="index"
@@ -31,10 +34,10 @@
 
     data: () => ({
       items: [
-        { title: 'Click Me' },
-        { title: 'Click Me' },
-        { title: 'Click Me' },
+        { title: 'Click Me 1' },
         { title: 'Click Me 2' },
+        { title: 'Click Me 3' },
+        { title: 'Click Me 4' },
       ],
     }),
     methods: {
