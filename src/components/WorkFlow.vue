@@ -1,26 +1,7 @@
 <template>
   <div>
-    <v-stepper v-model="e1" :vertical="vertical" :alt-labels="altLabels">
-      <template v-if="vertical">
-        <template v-for="n in steps">
-          <v-stepper-step
-            :key="`${n}-step`"
-            :complete="e1 > n"
-            :step="n"
-            :editable="editable"
-            >Step {{ n }}</v-stepper-step
-          >
-
-          <v-stepper-content :key="`${n}-content`" :step="n">
-            <v-card class="mb-12" color="grey lighten-1"></v-card>
-
-            <v-btn color="primary" @click="nextStep(n)">Continue</v-btn>
-
-            <v-btn text>Cancel</v-btn>
-          </v-stepper-content>
-        </template>
-      </template>
-      <template v-else>
+    <v-stepper v-model="e1" alt-labels>
+      <template>
         <v-stepper-header>
           <template v-for="n in steps">
             <v-stepper-step
@@ -28,8 +9,7 @@
               :complete="e1 > n"
               :step="n"
               :editable="editable"
-              >Step {{ n }}</v-stepper-step
-            >
+            >Step {{ n }}</v-stepper-step>
 
             <v-divider v-if="n !== steps" :key="n"></v-divider>
           </template>
@@ -37,9 +17,7 @@
 
         <v-stepper-items>
           <v-stepper-content v-for="n in steps" :key="`${n}-content`" :step="n">
-            <v-card class="mb-12" color="grey lighten-1" height="300px"
-              >tool description</v-card
-            >
+            <v-card class="mb-12" color="grey lighten-1" min-height="348px">tool description</v-card>
 
             <v-btn color="primary" @click="nextStep(n)">Continue</v-btn>
 
@@ -56,8 +34,7 @@ export default {
   data() {
     return {
       e1: 1,
-      steps: 5,
-      vertical: false,
+      steps: 7,
       altLabels: true,
       editable: true,
     };
