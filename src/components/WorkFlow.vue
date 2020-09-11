@@ -17,7 +17,7 @@
 
         <v-stepper-items>
           <v-stepper-content v-for="n in steps" :key="`${n}-content`" :step="n">
-            <v-card class="mb-12" color="grey lighten-1" min-height="348px">tool description</v-card>
+            <v-card class="mb-12" color="grey lighten-1" min-height="348px"><DatabaseSelect/></v-card>
 
             <v-btn color="primary" @click="nextStep(n)">Continue</v-btn>
 
@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import DatabaseSelect from "./DatabaseSelect"
 export default {
   data() {
     return {
@@ -38,6 +39,9 @@ export default {
       altLabels: true,
       editable: true,
     };
+  },
+  components: {
+    DatabaseSelect
   },
 
   watch: {
